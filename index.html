@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pokédex Online</title>
+
+  <!-- Link para o CSS externo -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Cabeçalho do site -->
+  <header>
+    <h1>Pokédex Online</h1>
+    <p>Pesquise pelo nome de qualquer Pokémon e veja suas informações!</p>
+  </header>
+
+  <!-- Área principal do site -->
+  <main>
+    <!-- Formulário de pesquisa -->
+    <form id="search-form">
+      <!-- Campo para digitar o nome do Pokémon -->
+      <input type="text" id="pokemon-input" placeholder="Digite o nome do Pokémon..." required />
+      <!-- Botão de envio -->
+      <button type="submit">Pesquisar</button>
+    </form>
+
+    <!-- Cartão onde as informações do Pokémon serão exibidas -->
+    <div id="pokemon-card" class="pokemon-card hidden">
+      <!-- Imagem do Pokémon -->
+      <img id="pokemon-img" class="pokemon-img" alt="Imagem do Pokémon" />
+      <!-- Informações -->
+      <div class="pokemon-info">
+        <h3 id="pokemon-name" class="pokemon-name"></h3>
+        <p id="pokemon-type" class="pokemon-type"></p>
+        <p id="pokemon-description" class="pokemon-description"></p>
+      </div>
+    </div>
+
+    <!-- Mensagem de erro (caso o Pokémon não seja encontrado) -->
+    <p id="error-message" class="error hidden">Pokémon não encontrado. Tente outro nome!</p>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 Pokédex Online — Site educacional e informativo.</p>
+  </footer>
+
+  <!-- Script JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
